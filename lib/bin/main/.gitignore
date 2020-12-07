@@ -1,3 +1,5 @@
-# Para o arquivo de configuração de banco.
-
-*.yml
+/application.yml
+/com/
+/schema-cinemax.sql
+/static/
+/templates/
