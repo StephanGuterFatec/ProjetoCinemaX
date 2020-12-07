@@ -1,0 +1,47 @@
+#formulario {
+    width: 40vw;
+}
+
+#formulario .painel a {
+    margin-top: 5vh;
+}
+
+#formulario .form form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+#formulario .form form fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+#formulario .form form label {
+    padding: 10px 0;
+}
+
+#formulario .form form fieldset span {
+    padding: 0 20px;
+    display: flex;
+}
+
+#formulario .form form fieldset span label {
+    align-self: baseline;
+}
+
+#formulario .form form input, #formulario .form form select {
+    font-size: 1.5rem;
+    height: 40px;
+}
+
+#formulario .form form input[type="submit"] {
+    margin-top: 30px;
+    margin-bottom: 20vh;
+}
+
+input[type="radio"] {
+    margin: 4px 10px;
+}
+

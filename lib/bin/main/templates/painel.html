@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CinemaX - Painel</title>
+
+    <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+</head>
+<body>
+    <div class="container">
+        <header class="painel">
+            <a href="./index.html" th:href="@{/}">
+                <img src="../static/images/cinemax-logo.svg" th:src="@{/images/cinemax-logo.svg}" alt="Logo">
+            </a>
+            <h1>Painel de Controle</h1>
+        </header>
+        <section class="opcoes">
+            <div>
+                <a href="./form-exibicao.html" th:href="@{/nova-exibicao}">
+                    <img src="../static/images/novo.png" th:src="@{/images/novo.png}" alt="Nova Exibição">
+                    <b>Nova Exibição</b>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../static/images/editar.png" th:src="@{/images/editar.png}" alt="Editar Exibição">
+                    <b>Editar Exibição</b>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="../static/images/excluir.png" th:src="@{/images/excluir.png}" alt="Excluir Exibição">
+                    <b>Excluir Exibição</b>
+                </a>
+            </div>
+            <div>
+                <a href="emcartaz.html" th:href="@{/exibircartaz}">
+                    <img src="../static/images/listar.png" th:src="@{/images/listar.png}" alt="Listar Exibições">
+                    <b>Ver Exibições</b>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

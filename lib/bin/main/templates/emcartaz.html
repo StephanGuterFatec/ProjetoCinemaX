@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CinemaX - Em Cartaz</title>
+
+    <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/emcartaz.css" th:href="@{/css/emcartaz.css}">
+</head>
+<body>
+    <div id="emcartaz" class="container">
+        <header>
+            <a href="./index.html" th:href="@{/}">
+                <img src="../static/images/cinemax-logo.svg" th:src="@{/images/cinemax-logo.svg}" alt="Logo">
+            </a>
+            <h1>Em Cartaz</h1>
+        </header>
+        <section class="emcartaz">
+            <div class="filme" th:each="exibicao : ${exibicoes}">
+                <a href="#">
+                    <div class="nome">
+                        <b th:text="${exibicao.filme}"></b>
+                    </div>
+                    <div class="info">
+                        <span class="data" th:text="${#numbers.formatInteger(exibicao.dia, 2)  + '/' + #numbers.formatInteger(exibicao.mes, 2) + '/' + #numbers.formatInteger(exibicao.ano, 4)}"></span><span class="separador">-</span><span class="hora" th:text="${#numbers.formatInteger(exibicao.hora, 2) + ':' + #numbers.formatInteger(exibicao.minuto, 2)}"></span>
+                    </div>
+                    <div>
+                        <span class="sala" th:text="${'Sala ' + exibicao.sala}"></span><span class="separador">-</span><span class="tipo-sala" th:text="${exibicao.tipo_sala}"></span><span class="separador">|</span><span class="dub-leg" th:text="${exibicao.dub_leg}"></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
