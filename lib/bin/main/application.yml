@@ -1,0 +1,16 @@
+server:
+  port : 8080
+
+spring:
+    datasource:
+        platform: postgres
+        url: jdbc:postgresql://ec2-174-129-199-54.compute-1.amazonaws.com:5432/d4qqe4t2ufa9j8
+        username: mxvpzlwhwkbejc
+        password: 2e82552e787d40699b40cd193029e69e377238dd6e7443248943a14627fa1c4d
+        driverClassName: org.postgresql.Driver
+        initialization-mode: always
+        initialize: true
+        schema: classpath:/schema-cinemax.sql
+    jpa: 
+        hibernate:
+            ddl-auto: create-drop
